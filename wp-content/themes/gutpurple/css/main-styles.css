@@ -1409,6 +1409,11 @@ footer.site-footer {
     .full-container {
         width: 96%;
     }
+
+    h1.wp-block-heading.has-x-large-font-size {
+        font-size: 36px !important;
+        margin-top: 0;
+    }
 }
 
 
