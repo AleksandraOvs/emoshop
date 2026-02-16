@@ -507,6 +507,17 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
         height: 200px;
     } */
 
+    .toggle-block .wp-block-column .three-pics__columns .wp-block-column.three-pics__column .wp-block-cover {
+        max-height: 200px;
+        flex-basis: 200px;
+        min-height: 200px !important;
+    }
+
+    .toggle-block__item .wp-block-column .wp-block-cover {
+        height: 200px;
+        min-height: unset !important;
+    }
+
     .site-branding {
         width: 190px;
         height: 60px;
