@@ -492,7 +492,7 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
         margin: 0 auto;
     }
 
-    .toggle-block__item .wp-block-column .wp-block-columns.three-pics__columns .wp-block-column {
+    .toggle-block__item .wp-block-column {
         max-height: 200px;
         flex-basis: 200px;
         min-height: 200px !important;
