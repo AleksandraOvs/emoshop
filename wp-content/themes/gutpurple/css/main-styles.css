@@ -1385,6 +1385,7 @@ footer.site-footer {
 @media (max-width: 992px) {
     .wp-block-group.toggle-block.container>.wp-block-columns {
         flex-direction: column;
+        width: 100%;
     }
 }
 
