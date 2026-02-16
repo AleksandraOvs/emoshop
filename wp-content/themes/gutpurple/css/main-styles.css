@@ -1390,11 +1390,12 @@ footer.site-footer {
 
 @media (max-width: 576px) {
     .hero {
-        height: 30vh;
+        min-height: calc(100vh - 70px);
     }
+}
 
 
-    .wp-block-column.description-img {
-        max-height: 450px;
-    }
+.wp-block-column.description-img {
+    max-height: 450px;
+}
 }
