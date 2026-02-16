@@ -1439,6 +1439,7 @@ footer.site-footer {
 
     .archive-inner {
         flex-direction: column-reverse;
+        gap: 40px;
     }
 
     .archive-inner>aside {
