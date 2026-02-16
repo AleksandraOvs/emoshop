@@ -159,6 +159,7 @@ function mytheme_output_custom_colors()
 	$primary    = get_theme_mod('mytheme_primary_color', '#0073aa');
 	$secondary  = get_theme_mod('mytheme_secondary_color', '#005177');
 	$accent     = get_theme_mod('mytheme_accent_color', '#d54e21');
+	$grey    = get_theme_mod('mytheme_grey_color', '#797979');
 	$background = get_theme_mod('mytheme_background_color', '#ffffff');
 
 	echo "<style>
@@ -166,6 +167,7 @@ function mytheme_output_custom_colors()
             --theme-color-primary: {$primary};
             --theme-color-secondary: {$secondary};
             --theme-color-accent: {$accent};
+			--theme-color-grey: {$grey};
             --theme-color-background: {$background};
         }
     </style>";
@@ -184,6 +186,7 @@ function mytheme_editor_custom_properties()
 	$primary    = get_theme_mod('mytheme_primary_color', '#0073aa');
 	$secondary  = get_theme_mod('mytheme_secondary_color', '#005177');
 	$accent     = get_theme_mod('mytheme_accent_color', '#d54e21');
+	$grey     = get_theme_mod('mytheme_grey_color', '#797979');
 	$background = get_theme_mod('mytheme_background_color', '#ffffff');
 
 	$css = "
@@ -191,11 +194,13 @@ function mytheme_editor_custom_properties()
         --theme-color-primary: {$primary};
         --theme-color-secondary: {$secondary};
         --theme-color-accent: {$accent};
+		theme-color-grey: {$grey};
         --theme-color-background: {$background};
 
         /* ДЛЯ ПОЛНОЙ СОВМЕСТИМОСТИ С GUTENBERG */
         --wp--preset--color--primary: {$primary};
         --wp--preset--color--secondary: {$secondary};
+		 --wp--preset--color--grey: {$grey};
         --wp--preset--color--accent: {$accent};
     }";
 

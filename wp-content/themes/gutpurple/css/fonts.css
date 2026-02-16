@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Stetica";
+    font-weight: 300;
+    src: local("Stetica"),
+        url(../fonts/AA-Stetica-Light.otf) format("opentype"),
+        url(../fonts/AA-Stetica-Light.woff) format("woff"),
+        url(../fonts/AA-Stetica-Light.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Stetica";
+    font-weight: 400;
+    src: local("Stetica"),
+        url(../fonts/AA-Stetica-Regular.otf) format("opentype"),
+        url(../fonts/AA-Stetica-Regular.woff) format("woff"),
+        url(../fonts/AA-Stetica-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Stetica";
+    font-weight: 600;
+    src: local("Stetica"),
+        url(../fonts/AA-Stetica-Medium.otf) format("opentype"),
+        url(../fonts/AA-Stetica-Medium.woff) format("woff"),
+        url(../fonts/AA-Stetica-Medium.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Stetica";
+    font-weight: 700;
+    src: local("Stetica"),
+        url(../fonts/AA-Stetica-Bold.otf) format("opentype"),
+        url(../fonts/AA-Stetica-Bold.woff) format("woff"),
+        url(../fonts/AA-Stetica-Bold.woff2) format("woff2");
+    font-display: swap;
+}

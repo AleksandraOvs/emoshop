@@ -102,6 +102,12 @@ h1 {
 	margin-bottom: 40px;
 }
 
+h3 {
+	font-size: 30px;
+	line-height: 1;
+	font-weight: 600;
+}
+
 /* Grouping content
 	 ========================================================================== */
 
@@ -212,7 +218,8 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
+	font-family: 'Stetica';
+	font-weight: 400;
 	font-size: 100%;
 	line-height: 1.15;
 	margin: 0;
@@ -454,6 +461,7 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
+	font-family: 'Stetica', sans-serif;
 }
 
 hr {

@@ -18,6 +18,11 @@
           "name": "Accent",
           "color": "var(--theme-color-accent)"
         },
+         {
+          "slug": "grey",
+          "name": "Grey",
+          "color": "var(--theme-color-grey)"
+        },
         {
           "slug": "background",
           "name": "Background",

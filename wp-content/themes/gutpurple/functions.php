@@ -178,6 +178,8 @@ function gutpurple_scripts()
 
 	wp_enqueue_style('gutpurple-main-styles', get_stylesheet_directory_uri() . '/css/main-styles.css', array(), _S_VERSION);
 
+	wp_enqueue_style('fonts', get_stylesheet_directory_uri() . '/css/fonts.css', array(), _S_VERSION);
+
 	wp_style_add_data('gutpurple-style', 'rtl', 'replace');
 	wp_enqueue_style('swiper_styles', get_stylesheet_directory_uri() . '/css/swiper-bundle.min.css', array(), time());
 
