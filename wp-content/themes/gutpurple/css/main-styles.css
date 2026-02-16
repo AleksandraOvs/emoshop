@@ -537,6 +537,7 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
     .archive-inner article .event-item__content .event-item__excerpt {
         display: none;
     }
+
 }
 
 /*PATTERNS*/
@@ -778,7 +779,7 @@ button.toggle-block__less {
 
 .event-item__image:hover img {
     filter: brightness(1.2);
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -1426,6 +1427,25 @@ footer.site-footer {
 @media (max-width: 992px) {
     .wp-block-group.toggle-block.container>.wp-block-columns {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .archive-inner article {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .archive-inner {
+        flex-direction: column-reverse;
+    }
+
+    .archive-inner>aside {
+        width: 100%;
+    }
+
+    .archive-inner.has-sidebar {
         width: 100%;
     }
 }
