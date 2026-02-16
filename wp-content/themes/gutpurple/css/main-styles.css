@@ -1392,10 +1392,13 @@ footer.site-footer {
     .hero {
         min-height: calc(100vh - 70px);
     }
+
+    .full-container {
+        width: 96%;
+    }
 }
 
 
 .wp-block-column.description-img {
     max-height: 450px;
-}
 }
