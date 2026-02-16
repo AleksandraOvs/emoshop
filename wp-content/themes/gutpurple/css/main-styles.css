@@ -493,12 +493,11 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
     }
 
     .toggle-block__item .wp-block-column .wp-block-columns.three-pics__columns .wp-block-column {
-
         max-height: 200px;
+        flex-basis: 200px;
         flex-grow: unset;
         display: block;
         overflow: hidden;
-
     }
 
     .toggle-block__item .wp-block-column .wp-block-columns.three-pics__columns .wp-block-column .wp-block-cover,
