@@ -1395,7 +1395,7 @@ footer.site-footer {
     min-width: 350px;
     z-index: 150;
     opacity: 0;
-    padding: 100px 20px 60px;
+    padding: 140px 20px 60px;
     transform: translateX(100%);
     transition: all .5s linear;
 }
