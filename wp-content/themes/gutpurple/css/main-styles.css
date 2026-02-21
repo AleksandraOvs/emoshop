@@ -1050,7 +1050,8 @@ h3.faq-question {
 /* контейнер вкладки */
 .content-block {
     width: 100%;
-    min-width: 100%;
+    min-width: 0;
+    width: 0;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
@@ -1065,6 +1066,8 @@ h3.faq-question {
 /* активная вкладка */
 .content-block.active {
     max-height: 2000px;
+    min-width: 100%;
+    width: 100%;
     /* с запасом */
     opacity: 1;
     transform: translateY(0);
