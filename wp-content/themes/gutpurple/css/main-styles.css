@@ -582,6 +582,7 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
 
 .wp-block-columns.three-pics__columns {
     margin-bottom: 0;
+    gap: 1em;
 }
 
 /*TOGGLE BLOCKS*/
