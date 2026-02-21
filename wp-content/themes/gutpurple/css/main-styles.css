@@ -767,7 +767,7 @@ button.toggle-block__less {
 }
 
 .badge {
-    background: var(--theme-color-accent);
+    background: var(--theme-color-secondary);
     padding: 5px 20px;
     border-radius: 3px;
     position: absolute;
