@@ -607,7 +607,7 @@ nav.toggled button.menu-toggle .bar:nth-child(3) {
     width: 100%;
     max-height: max-content;
     opacity: 1;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     transform: translateY(0);
 }
 
