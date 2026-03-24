@@ -538,3 +538,70 @@ add_action('enqueue_block_editor_assets', function () {
         '1.0'
     );
 });
+
+//CPT slider
+
+add_action('init', function () {
+
+    // 1️⃣ JS редактора
+    wp_register_script(
+        'my-custom-blocks-cpt-slider-editor-script',
+        plugins_url('blocks/cpt-slider/index.js', __FILE__),
+        ['wp-blocks', 'wp-element', 'wp-block-editor', 'wp-components'], // без wp-data для отладки
+        '1.0',
+        true
+    );
+
+    // 2️⃣ Стили редактора
+    wp_register_style(
+        'my-custom-blocks-cpt-slider-editor-style',
+        plugins_url('blocks/cpt-slider/editor.css', __FILE__),
+        [],
+        '1.0'
+    );
+
+    // 3️⃣ Стили фронта
+    wp_register_style(
+        'my-custom-blocks-cpt-slider-style',
+        plugins_url('blocks/cpt-slider/style.css', __FILE__),
+        [],
+        '1.0'
+    );
+
+    wp_register_script(
+        'my-custom-blocks-cpt-slider-frontend-script',
+        plugins_url('blocks/cpt-slider/frontend.js', __FILE__),
+        [],
+        '1.0',
+        true
+    );
+
+
+    // 4️⃣ Регистрируем блок
+    register_block_type(__DIR__ . '/blocks/cpt-slider', [
+        'editor_script'   => 'my-custom-blocks-cpt-slider-editor-script',
+        'editor_style'    => 'my-custom-blocks-cpt-slider-editor-style',
+        'style'           => 'my-custom-blocks-cpt-slider-style',
+        'render_callback' => 'my_custom_cpt_slider_render',
+
+    ]);
+
+    function my_custom_cpt_slider_render($attributes)
+    {
+        $render_file = __DIR__ . '/blocks/cpt-slider/render.php';
+        if (!file_exists($render_file)) return '';
+        return include $render_file;
+    }
+});
+
+add_action('wp_enqueue_scripts', function () {
+    if (!is_singular()) return;
+    global $post;
+    if (!$post || !has_block('my-custom-blocks/cpt-slider', $post->post_content)) return;
+
+    wp_enqueue_style('swiper');
+    wp_enqueue_script('swiper');
+
+    wp_enqueue_style('my-custom-blocks-cpt-slider-style');
+    wp_enqueue_script('my-custom-blocks-cpt-slider-frontend-script');
+});

@@ -1,0 +1,26 @@
+{
+  "apiVersion": 2,
+  "name": "my-custom-blocks/cpt-slider",
+  "title": "CPT Slider",
+  "category": "widgets",
+  "icon": "slides",
+  "description": "Слайдер custom post type",
+  "editorScript": "my-custom-blocks-cpt-slider-editor-script",
+  "editorStyle": "my-custom-blocks-cpt-slider-editor-style",
+  "style": "my-custom-blocks-cpt-slider-style",
+  "render": "file:./render.php",
+  "attributes": {
+    "postType": {
+      "type": "string",
+      "default": "post"
+    },
+    "taxonomy": {
+      "type": "string",
+      "default": "category"
+    },
+    "terms": {
+      "type": "array",
+      "default": []
+    }
+  }
+}
