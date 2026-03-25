@@ -597,11 +597,23 @@ add_action('init', function () {
 add_action('wp_enqueue_scripts', function () {
     if (!is_singular()) return;
     global $post;
-    if (!$post || !has_block('my-custom-blocks/cpt-slider', $post->post_content)) return;
 
-    wp_enqueue_style('swiper');
-    wp_enqueue_script('swiper');
+    $content_to_check = $post->post_content ?? '';
 
-    wp_enqueue_style('my-custom-blocks-cpt-slider-style');
-    wp_enqueue_script('my-custom-blocks-cpt-slider-frontend-script');
+    // Если есть подключенный шаблон
+    $template_id = carbon_get_post_meta($post->ID, 'template_page')[0]['id'] ?? null;
+    if ($template_id) {
+        $template_post = get_post($template_id);
+        if ($template_post) {
+            $content_to_check .= $template_post->post_content;
+        }
+    }
+
+    if (has_block('my-custom-blocks/cpt-slider', $content_to_check)) {
+        wp_enqueue_style('swiper');
+        wp_enqueue_script('swiper');
+
+        wp_enqueue_style('my-custom-blocks-cpt-slider-style');
+        wp_enqueue_script('my-custom-blocks-cpt-slider-frontend-script');
+    }
 });
