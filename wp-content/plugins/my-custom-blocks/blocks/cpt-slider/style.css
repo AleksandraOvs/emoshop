@@ -58,7 +58,8 @@
 }
 
 .swiper-slide.cpt-slider__slide a:hover h3 {
-    background: var(--theme-color-secondary);
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
 }
 
 .swiper-slide.cpt-slider__slide a:hover img {
@@ -76,15 +77,19 @@
 }
 
 .swiper-slide.cpt-slider__slide a h3 {
+    position: absolute;
     margin: 0;
     height: 100%;
     border-radius: 8px;
     padding: 10px 20px;
     box-sizing: border-box;
     font-size: 20px;
-    color: #fff;
+    color: var(--theme-color-primary);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, 0));
     display: flex;
     align-items: flex-end;
     font-weight: 400;
     transition: all .5s linear;
+
+
 }
