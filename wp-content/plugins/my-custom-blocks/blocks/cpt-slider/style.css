@@ -60,7 +60,7 @@
 }
 
 .swiper-slide.cpt-slider__slide a:hover h3 {
-    background: transparent;
+    opacity: 0;
 }
 
 .swiper-slide.cpt-slider__slide a:hover img {
