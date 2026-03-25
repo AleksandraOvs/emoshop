@@ -69,7 +69,7 @@
     overflow: hidden;
     border-radius: 8px;
     width: 100%;
-    height: calc(100% - 70px);
+    height: 100%;
     object-fit: cover;
     object-position: center;
     transition: all .7s ease-in-out;
@@ -77,15 +77,14 @@
 
 .swiper-slide.cpt-slider__slide a h3 {
     margin: 0;
-    height: 70px;
+    height: 100%;
     border-radius: 8px;
-    background: var(--theme-color-accent);
     padding: 10px 20px;
     box-sizing: border-box;
     font-size: 20px;
     color: #fff;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     font-weight: 400;
     transition: all .5s linear;
 }
