@@ -48,21 +48,32 @@ get_header();
         endwhile;
     } else {
 
-        echo '<div class="container">';
+    ?>
+        <div class="full-container cover-thumbnail">
+            <?php gutpurple_post_thumbnail(); ?>
+            <div class="cover-thumbnail__content">
 
-        // стандартный режим — только контент страницы
-        while (have_posts()) :
-            the_post();
+                <ul class="breadcrumbs__list">
+                    <?php site_breadcrumbs(); ?>
+                </ul>
+                <?php
+                the_title('<h1 class="page-title">', '</h1>');
+                ?>
 
-            get_template_part('template-parts/content', 'page');
 
-            if (comments_open() || get_comments_number()) :
-                comments_template();
-            endif;
+            </div>
+        </div>
 
-        endwhile;
-
-        echo '</div>';
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="container">
+                <div class="entry-content">
+                    <?php
+                    the_content();
+                    ?>
+                </div>
+            </div>
+        </article>
+    <?php
     }
     ?>
 

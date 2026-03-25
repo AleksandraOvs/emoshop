@@ -1280,9 +1280,65 @@ h3.faq-question {
     border-radius: 8px;
 }
 
-/*POST*/
+/*EVENTS POST*/
 
-article.events .post-thumbnail {
+.full-container.cover-thumbnail {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.full-container.cover-thumbnail .post-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+
+.full-container.cover-thumbnail .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.full-container.cover-thumbnail .post-thumbnail::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: absolute;
+}
+
+.cover-thumbnail__content {
+    z-index: 5;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.cover-thumbnail__content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cover-thumbnail__content h1 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* article.events .post-thumbnail {
     width: 100%;
     height: 300px;
 }
@@ -1309,7 +1365,7 @@ article.events .entry-content {
     position: relative;
     width: 100%;
     backdrop-filter: blur(20px);
-}
+} */
 
 
 /*GUT STYLES*/
@@ -1465,6 +1521,17 @@ footer.site-footer {
     border-bottom: none;
 }
 
+@media (max-width: 1600px) {
+    .cover-thumbnail__content {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .cover-thumbnail__content {
+        width: 90%;
+    }
+}
 
 @media (max-width: 992px) {
     .wp-block-group.toggle-block.container>.wp-block-columns {
@@ -1491,6 +1558,31 @@ footer.site-footer {
     .archive-inner.has-sidebar {
         width: 100%;
     }
+
+    .cover-thumbnail__content {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .full-container.cover-thumbnail {
+        height: auto;
+    }
+
+    .full-container.cover-thumbnail .post-thumbnail::after {
+        content: none;
+    }
+
+    .full-container.cover-thumbnail .post-thumbnail {
+        position: relative;
+    }
+
+    .full-container.cover-thumbnail .post-thumbnail {
+        height: 130px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1511,4 +1603,10 @@ footer.site-footer {
 
 .wp-block-column.description-img {
     max-height: 450px;
+}
+
+@media (max-width: 480px) {
+    .breadcrumbs__list {
+        font-size: 14px;
+    }
 }
