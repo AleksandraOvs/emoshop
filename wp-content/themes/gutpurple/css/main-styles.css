@@ -1276,6 +1276,21 @@ h3.faq-question {
     border-radius: 8px;
 }
 
+/*POST*/
+
+article.events .post-thumbnail {
+    width: 100%;
+    height: 300px;
+}
+
+article.events .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 /*GUT STYLES*/
 
 .wp-block-image.size-large img {
