@@ -60,7 +60,7 @@
 }
 
 .swiper-slide.cpt-slider__slide a:hover h3 {
-    background: linear-gradient(0deg, rgba(255, 255, 255, .85), rgba(255, 255, 255, .5));
+    background: linear-gradient(0deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
 }
 
 .swiper-slide.cpt-slider__slide a:hover img {
