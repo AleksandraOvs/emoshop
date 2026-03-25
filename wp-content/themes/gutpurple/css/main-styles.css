@@ -1297,6 +1297,17 @@ article.events .post-thumbnail {
     overflow: hidden;
 }
 
+article.events .entry-content {
+    background: rgba(255, 255, 255, .7);
+    border-radius: 8px;
+    padding: 30px 20px;
+    margin: -40px auto 40px;
+    z-index: 3;
+    position: relative;
+    width: 96%;
+    backdrop-filter: blur(20px);
+}
+
 
 /*GUT STYLES*/
 
