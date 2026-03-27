@@ -1368,6 +1368,10 @@ h3.faq-question {
     margin-bottom: 0;
 }
 
+.cover-thumbnail__content .breadcrumbs__list ul svg path {
+    fill: #fff;
+}
+
 /* article.events .post-thumbnail {
     width: 100%;
     height: 300px;
@@ -1621,6 +1625,10 @@ footer.site-footer {
     .cover-thumbnail__content a,
     .cover-thumbnail__content .breadcrumbs__list ul li a {
         color: var(--theme-color-primary);
+    }
+
+    .cover-thumbnail__content .breadcrumbs__list ul svg path {
+        fill: var(--theme-color-primary);
     }
 
 
