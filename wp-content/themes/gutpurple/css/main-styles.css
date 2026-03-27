@@ -1256,8 +1256,7 @@ h3.faq-question {
 
 .slider__button-next.swiper-button-disabled,
 .slider__button-prev.swiper-button-disabled {
-    opacity: .5;
-    background: #9b9b9b;
+    opacity: 0;
 }
 
 .slider__button-next.swiper-button-disabled:hover,
