@@ -30,7 +30,7 @@
 
 @media (max-width: 480px) {
     .swiper-slide.gallery-slider__slide>a {
-        height: 105px;
+        height: 200px;
     }
 
     .swiper-slide.gallery-slider__slide {
