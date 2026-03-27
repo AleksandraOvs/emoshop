@@ -1201,9 +1201,11 @@ h3.faq-question {
     -o-backdrop-filter: blur(10px);
 }
 
-.sliders-controls {
+.swiper-controls {
     display: flex;
     justify-content: space-between;
+    margin: 20px auto 0;
+    width: 80%;
 }
 
 .slider__button-next,
