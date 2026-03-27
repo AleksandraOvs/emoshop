@@ -1626,4 +1626,13 @@ footer.site-footer {
     .breadcrumbs__list {
         font-size: 14px;
     }
+
+    .swiper-controls {
+        width: 100%;
+    }
+
+    .swiper-controls .slider__button-prev,
+    .swiper-controls .slider__button-next {
+        display: none;
+    }
 }
