@@ -241,7 +241,7 @@ figure.wp-block-image {
 }
 
 #primary {
-    padding-top: calc(80px + .5em);
+    padding-top: 20px;
 }
 
 /* 
@@ -272,8 +272,8 @@ figure.wp-block-image {
 header.site-header {
     width: 100%;
     /* left: 0;
-    margin: 0 auto;*/
-    position: fixed;
+    margin: 0 auto;
+    position: fixed;*/
     /*top: 2%; */
     z-index: 200;
 }

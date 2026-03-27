@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sliders.forEach(slider => {
         new Swiper(slider, {
-            slidesPerView: 1.1,
+            slidesPerView: 1,
             spaceBetween: 7,
             loop: false,
 
@@ -16,13 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: slider.querySelector('.swiper-button-next'),
                 prevEl: slider.querySelector('.swiper-button-prev'),
             },
-
-            breakpoints: {
-                576: {
-                    slidesPerView: 1.3,
-                    spaceBetween: 16,
-                }
-            }
         });
     });
 });
