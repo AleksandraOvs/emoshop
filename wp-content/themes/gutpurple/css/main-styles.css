@@ -1201,11 +1201,21 @@ h3.faq-question {
     -o-backdrop-filter: blur(10px);
 }
 
-.swiper-controls {
+.swiper-pagination {
     display: flex;
     justify-content: space-between;
     margin: 20px auto 0;
     width: 80%;
+    align-items: center;
+}
+
+.swiper-controls .swiper-pagination {
+    position: relative;
+    width: max-content;
+    align-items: center;
+    display: flex;
+    top: unset;
+    bottom: unset;
 }
 
 .slider__button-next,
