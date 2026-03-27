@@ -1269,7 +1269,7 @@ h3.faq-question {
 
 .slider__button-next.swiper-button-disabled:hover,
 .slider__button-prev.swiper-button-disabled:hover {
-    transform: none;
+    background: var(--theme-color-accent);
 }
 
 .slider-pagination.swiper-pagination {
