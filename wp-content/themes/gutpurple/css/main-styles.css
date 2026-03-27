@@ -1216,6 +1216,7 @@ h3.faq-question {
     display: flex;
     top: unset;
     bottom: unset;
+    margin: 0 auto;
 }
 
 .slider__button-next,
