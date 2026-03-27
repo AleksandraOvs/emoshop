@@ -1209,8 +1209,6 @@ h3.faq-question {
 .slider__button-next,
 .slider__button-prev {
     cursor: pointer;
-    position: absolute;
-    top: 45%;
     z-index: 5;
     width: 40px;
     height: 40px;
@@ -1218,14 +1216,6 @@ h3.faq-question {
     padding: 10px;
     border-radius: 100%;
     background: var(--theme-color-accent);
-}
-
-.slider__button-next {
-    right: 10px;
-}
-
-.slider__button-prev {
-    left: 10px;
 }
 
 .slider__button-next svg,
