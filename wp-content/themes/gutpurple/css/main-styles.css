@@ -1209,7 +1209,7 @@ h3.faq-question {
     align-items: center;
 }
 
-.swiper-controls .swiper-pagination {
+.swiper-controls .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
     position: relative;
     width: max-content;
     align-items: center;
