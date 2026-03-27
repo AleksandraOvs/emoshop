@@ -1254,6 +1254,17 @@ h3.faq-question {
     left: 10px;
 }
 
+.slider__button-next.swiper-button-disabled,
+.slider__button-prev.swiper-button-disabled {
+    opacity: .5;
+    background: #9b9b9b;
+}
+
+.slider__button-next.swiper-button-disabled:hover,
+.slider__button-prev.swiper-button-disabled:hover {
+    transform: none;
+}
+
 .slider-pagination.swiper-pagination {
     position: relative;
 }
