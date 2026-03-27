@@ -28,10 +28,6 @@
     object-position: center;
 }
 
-.gallery-slider.swiper {
-    overflow: visible;
-}
-
 @media (max-width: 480px) {
     .swiper-slide.gallery-slider__slide>a {
         height: 105px;
