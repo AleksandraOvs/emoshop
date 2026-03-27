@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
 
             navigation: {
-                nextEl: slider.querySelector('.slider__button-prev'),
-                prevEl: slider.querySelector('.slider__button-next'),
+                nextEl: slider.querySelector('.slider__button-next'),
+                prevEl: slider.querySelector('.slider__button-prev'),
             },
         });
     });
