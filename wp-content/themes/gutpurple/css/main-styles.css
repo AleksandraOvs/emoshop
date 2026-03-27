@@ -1215,6 +1215,17 @@ h3.faq-question {
     width: 40px;
     height: 40px;
     transition: all .5s linear;
+    padding: 10px;
+    border-radius: 100%;
+    background: var(--theme-color-accent);
+}
+
+.slider__button-next {
+    right: 10px;
+}
+
+.slider__button-prev {
+    left: 10px;
 }
 
 .slider__button-next svg,
@@ -1225,15 +1236,9 @@ h3.faq-question {
     object-position: center;
 }
 
-.slider__button-next svg circle,
-.slider__button-prev svg circle {
-    transition: all .5s linear;
-}
-
-.slider__button-next:hover svg circle,
-.slider__button-prev:hover svg circle {
-    fill: var(--wp--preset--color--accent);
-
+.slider__button-next svg path,
+.slider__button-prev svg path {
+    fill: #fff;
 }
 
 .slider__button-next:hover,
