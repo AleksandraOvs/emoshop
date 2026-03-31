@@ -48,6 +48,10 @@
     background: var(--theme-color-primary);
 }
 
+.cpt-slider-categories .category-tab.active {
+    background: var(--theme-color-accent);
+}
+
 .swiper-slide.cpt-slider__slide {
     height: 270px;
 }
