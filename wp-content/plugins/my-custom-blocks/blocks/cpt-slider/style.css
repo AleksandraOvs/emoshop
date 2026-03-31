@@ -49,7 +49,7 @@
 }
 
 .cpt-slider-categories .category-tab.active {
-    background: var(--theme-color-accent);
+    background: var(--theme-color-primary);
 }
 
 .swiper-slide.cpt-slider__slide {
