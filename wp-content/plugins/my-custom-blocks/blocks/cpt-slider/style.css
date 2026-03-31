@@ -26,23 +26,26 @@
 .cpt-slider-categories {
     display: flex;
     gap: 10px;
-}
-
-.category-tab {
-    background: var(--theme-color-accent);
-    border-radius: 25px;
-    color: #fff;
-}
-
-.category-tab.active {
-    background: var(--theme-color-secondary);
-    border-color: var(--theme-color-secondary);
-}
-
-.cpt-slider-categories {
-    display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 30px;
+}
+
+.cpt-slider-categories .category-tab {
+    padding: 10px 20px;
+    background: var(--theme-color-accent);
+    border-radius: 30px;
+    line-height: 1;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all .5s linear;
+}
+
+.cpt-slider-categories .category-tab:hover {
+    background: var(--theme-color-primary);
 }
 
 .swiper-slide.cpt-slider__slide {

@@ -987,7 +987,8 @@ h3.faq-question {
     position: relative;
 }
 
-.tabs {
+.tabs,
+.cpt-slider-categories {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -995,7 +996,8 @@ h3.faq-question {
     margin-bottom: 30px;
 }
 
-.tabs .tab {
+.tabs .tab,
+.cpt-slider-categories .category-tab {
     padding: 10px 20px;
     background: var(--theme-color-accent);
     border-radius: 30px;
@@ -1003,11 +1005,13 @@ h3.faq-question {
     cursor: pointer;
     color: #fff;
     font-weight: 300;
+    font-size: 14px;
     text-transform: uppercase;
     transition: all .5s linear;
 }
 
-.tabs .tab:hover {
+.tabs .tab:hover,
+.cpt-slider-categories .category-tab {
     background: var(--theme-color-primary);
 }
 
