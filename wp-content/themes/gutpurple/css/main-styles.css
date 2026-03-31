@@ -987,8 +987,7 @@ h3.faq-question {
     position: relative;
 }
 
-.tabs,
-.cpt-slider-categories {
+.tabs {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -996,8 +995,7 @@ h3.faq-question {
     margin-bottom: 30px;
 }
 
-.tabs .tab,
-.cpt-slider-categories .category-tab {
+.tabs .tab {
     padding: 10px 20px;
     background: var(--theme-color-accent);
     border-radius: 30px;
@@ -1010,8 +1008,7 @@ h3.faq-question {
     transition: all .5s linear;
 }
 
-.tabs .tab:hover,
-.cpt-slider-categories .category-tab {
+.tabs .tab:hover {
     background: var(--theme-color-primary);
 }
 
