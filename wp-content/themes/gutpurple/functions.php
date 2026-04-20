@@ -324,3 +324,11 @@ add_filter('carbon_fields_sanitize_rich_text', function ($value) {
 add_filter('get_the_archive_title', function ($title) {
 	return preg_replace('~^[^:]+: ~', '', $title);
 });
+
+add_filter('wp_generate_tag_cloud', 'remove_tag_count_parentheses');
+
+function remove_tag_count_parentheses($tag_string)
+{
+	$tag_string = str_replace(['(', ')'], '', $tag_string);
+	return $tag_string;
+}
