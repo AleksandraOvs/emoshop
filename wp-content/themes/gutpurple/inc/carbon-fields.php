@@ -105,6 +105,6 @@ function site_carbon()
                     ]
                 ]),
 
-            Field::make('rich_text', 'seo_text', 'SEO текст')
+            // Field::make('rich_text', 'seo_text', 'SEO текст')
         ]);
 }
