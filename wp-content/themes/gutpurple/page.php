@@ -1,82 +1,39 @@
 <?php
-
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package gutpurple
- */
-
 get_header();
 ?>
 
 <main id="primary" class="site-main">
-	<!-- <div class="page-inner"> -->
+
+	<!-- AJAX контейнер -->
+	<div id="ajax-content"
+		data-page-id="<?php echo get_the_ID(); ?>">
+
+		<div class="loading">
+			<span></span><span></span><span></span>
+		</div>
+
+	</div>
+
 	<?php
-	$template_id = carbon_get_the_post_meta('template_page')[0]['id'] ?? null;
+	// ==============================
+	// GUTENBERG КОНТЕНТ СТРАНИЦЫ
+	// ==============================
 
-	if ($template_id) {
+	while (have_posts()) :
+		the_post();
 
-		// выводим контент шаблона
-		$template_post = get_post($template_id);
+		$content = apply_filters('the_content', get_the_content());
 
-		if ($template_post) {
-
-			echo apply_filters('the_content', $template_post->post_content);
+		if (!empty(trim($content))) {
+			echo '<div class="editor-page-content container">';
+			echo $content;
+			echo '</div>';
 		}
 
-		// выводим контент страницы ПОД шаблоном
-		// while (have_posts()) :
-		// 	the_post();
-		// 	echo '<div class="container">';
-		// 	get_template_part('template-parts/content', 'page');
-		// 	echo '</div>';
-
-		// 	if (comments_open() || get_comments_number()) :
-		// 		comments_template();
-		// 	endif;
-
-		// endwhile;
-	} else {
-
-		// стандартный режим — только контент страницы
-		while (have_posts()) :
-			the_post();
-
-			get_template_part('template-parts/content', 'page');
-
-			if (comments_open() || get_comments_number()) :
-				comments_template();
-			endif;
-
-		endwhile;
-	}
+	endwhile;
 	?>
 
-	<?php
-	$seo_text = carbon_get_post_meta(get_the_ID(), 'seo_text');
-
-	if (!empty($seo_text)) {
-		echo '<div class="fixed-container">';
-		echo $seo_text;
-		echo '</div>';
-	}
-	?>
-
-
-
-	<!-- </div> -->
-
-
-
-</main><!-- #main -->
+</main>
 
 <?php
-//get_sidebar();
 get_footer();

@@ -189,6 +189,7 @@ function gutpurple_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
+	wp_enqueue_script('themescript', get_template_directory_uri() . '/js/init-scripts.js', array(), _S_VERSION, true);
 	wp_enqueue_script('themescript', get_template_directory_uri() . '/js/scripts.js', array(), _S_VERSION, true);
 	wp_enqueue_script('swiper_scripts', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), _S_VERSION, true);
 	wp_enqueue_script('tours_slider_scripts', get_template_directory_uri() . '/js/slider-scripts.js', array(), _S_VERSION, true);
@@ -248,6 +249,8 @@ require get_template_directory() . '/inc/edit-pages.php';
 require get_template_directory() . '/inc/posts-shortcode.php';
 
 require get_template_directory() . '/inc/breadcrumbs.php';
+
+require get_template_directory() . '/inc/ajax-blocks.php';
 
 /**
  * Carbon fields.

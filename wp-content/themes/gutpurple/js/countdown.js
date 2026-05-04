@@ -1,44 +1,50 @@
-function getEndOfDayTimestamp() {
-    const now = new Date();
-    const end = new Date();
-    end.setHours(23, 59, 59, 999);
-    return end.getTime();
-}
+function initCountdown() {
 
-function getSavedEndTime() {
-    const saved = localStorage.getItem('endOfDay');
-    const now = Date.now();
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
 
-    if (saved && parseInt(saved) > now) {
-        return parseInt(saved);
-    } else {
-        const newEnd = getEndOfDayTimestamp();
-        localStorage.setItem('endOfDay', newEnd);
-        return newEnd;
-    }
-}
+    if (!hoursEl || !minutesEl || !secondsEl) return;
 
-function updateCountdown() {
-    const now = Date.now();
-    const endTime = getSavedEndTime();
-    let diff = endTime - now;
-
-    if (diff <= 0) {
-        // Новый день, сбрасываем
-        localStorage.removeItem('endOfDay');
-        diff = getEndOfDayTimestamp() - now;
-        localStorage.setItem('endOfDay', getEndOfDayTimestamp());
+    function getEndOfDayTimestamp() {
+        const end = new Date();
+        end.setHours(23, 59, 59, 999);
+        return end.getTime();
     }
 
-    const hours = Math.floor(diff / 1000 / 60 / 60);
-    const minutes = Math.floor((diff / 1000 / 60) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+    function getSavedEndTime() {
+        const saved = localStorage.getItem('endOfDay');
+        const now = Date.now();
 
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        if (saved && parseInt(saved) > now) {
+            return parseInt(saved);
+        } else {
+            const newEnd = getEndOfDayTimestamp();
+            localStorage.setItem('endOfDay', newEnd);
+            return newEnd;
+        }
+    }
+
+    function updateCountdown() {
+        const now = Date.now();
+        const endTime = getSavedEndTime();
+        let diff = endTime - now;
+
+        if (diff <= 0) {
+            localStorage.removeItem('endOfDay');
+            diff = getEndOfDayTimestamp() - now;
+            localStorage.setItem('endOfDay', getEndOfDayTimestamp());
+        }
+
+        const hours = Math.floor(diff / 1000 / 60 / 60);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 }
-
-// Обновляем каждую секунду
-setInterval(updateCountdown, 1000);
-updateCountdown();
